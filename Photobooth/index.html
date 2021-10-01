@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Photo Booth</title>
+        <link rel="stylesheet" href="./css/imgpure.css"/>
+    </head>
+    <body style="background-color:darkgray">
+        <img src="./jacket.jpg" id="myimg" hidden/>
+        <center>
+            <div class="imgpurearea" oncontextmenu="false">
+                <h4>Photo Booth</h4>
+                <div class="imgpurerow">
+                   <div class="flex-container">
+                       <div class="flex-item">
+                        <video class="imgpurevideo" id="res-vid" autoplay muted></video>
+                        <canvas style="display:none;"></canvas>
+                        <br/>
+                        <br/>
+                        <div class="padded">
+                            <button class="imgpure-red imgpurebtn" id="streamer">Stream</button>
+                            <button class="imgpure-red imgpurebtn" id="shotbtn">Take Photo</button>
+                        </div>
+                        <img class="imgpurecanvas" id="imgpureimg" />
+                        <br/>
+                        <!--Saturation-->
+                        <span class="imgpuretxt">Saturation</span>
+                        <div class="range">
+                            <div class="field">
+                                <div class="value left">0</div>
+                                    <input class="imgpure-range" id="saturation" type="range" min="0" max="500" value="100" steps="1">
+                                <div class="value right">100%</div>
+                            </div>
+                        </div>
+                        <!--Sepia-->
+                        <span class="imgpuretxt">Sepia</span>
+                        <div class="range">
+                            <div class="field">
+                                <div class="value left">0</div>
+                                    <input class="imgpure-range" id="sepia" type="range" min="0" max="100" value="0" steps="1">
+                                <div class="value right">100%</div>
+                            </div>
+                        </div>
+
+                       </div>
+                       <div class="flex-item">
+                           <!--Blur-->
+                            <span class="imgpuretxt">Blur</span>
+                            <div class="range">
+                                <div class="field">
+                                    <div class="value left">0</div>
+                                        <input class="imgpure-range" id="blur" type="range" min="0" max="100" value="0" steps="1">
+                                    <div class="value right">100</div>
+                                </div>
+                            </div>
+                            <!--Brightness-->
+                            <span class="imgpuretxt">Brightness</span>
+                            <div class="range">
+                                <div class="field">
+                                    <div class="value left">0</div>
+                                        <input class="imgpure-range" id="brightness" type="range" min="0" max="500" value="100" steps="1">
+                                    <div class="value right">100%</div>
+                                </div>
+                            </div>
+                            <!--Contrast-->
+                            <span class="imgpuretxt">Contrast</span>
+                            <div class="range">
+                                <div class="field">
+                                    <div class="value left">0</div>
+                                        <input class="imgpure-range" id="contrast" type="range" min="0" max="500" value="100" steps="1">
+                                    <div class="value right">100%</div>
+                                </div>
+                            </div>
+                            <!--GrayScale-->
+                            <span class="imgpuretxt">GrayScale</span>
+                            <div class="range">
+                                <div class="field">
+                                    <div class="value left">0</div>
+                                        <input class="imgpure-range" id="grayscale" type="range" min="0" max="100" value="0" steps="1">
+                                    <div class="value right">100%</div>
+                                </div>
+                            </div>
+                            <!--Hue Rotation-->
+                            <span class="imgpuretxt">Hue Rotation</span>
+                            <div class="range">
+                                <div class="field">
+                                    <div class="value left">0</div>
+                                        <input class="imgpure-range" id="hue_rotate" type="range" min="0" max="360" value="0" steps="1">
+                                    <div class="value right">100deg</div>
+                                </div>
+                            </div>
+                            <!--Invert Color-->
+                            <span class="imgpuretxt">Invert Color</span>
+                            <div class="range">
+                                <div class="field">
+                                    <div class="value left">0</div>
+                                        <input class="imgpure-range" id="color_inverse" type="range" min="0" max="100" value="0" steps="1">
+                                    <div class="value right">100%</div>
+                                </div>
+                            </div>
+                            <!--Opacity-->
+                            <span class="imgpuretxt">Opacity</span>
+                            <div class="range">
+                                <div class="field">
+                                    <div class="value left">0</div>
+                                        <input class="imgpure-range" id="opacity" type="range" min="0" max="100" value="100" steps="1">
+                                    <div class="value right">100</div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <span class="imgpurebtns">
+                    <a href="#" class="imgpure-green imgpurebtn" id="download" download>Download</a>
+                </span>
+            </div>
+        </center>
+    <script src="./js/jquery-3.0.0.js"></script>
+    <script src="./js/imgpure.js"></script>
+    </body>
+</html>
